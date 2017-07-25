@@ -14,7 +14,7 @@
 
         $("#timer").html(secs + " remaining");
         if (secs <= 0) {
-           timeOut();
+            checkAnswer();
         }
         --secs;
         timer = setTimeout('countDown(' + secs + ',"' + elem + '")', 1000);
