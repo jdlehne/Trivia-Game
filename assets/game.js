@@ -189,7 +189,7 @@
             $("#answerDiv").html("Terrible Job!  We are guessing you got DJ Roomba right...");
         }
         if (correct >= 1 && correct <= 3) {
-            $("#answerDiv").html("Not Great, you probably have some semblence of a social life");
+            $("#answerDiv").html("Not Great, you probably have some semblance of a social life");
         }
         if (correct >= 4 && correct <= 7) {
             $("#answerDiv").html("Good Job, you seem to familiar with some of pop culture's great robots");
