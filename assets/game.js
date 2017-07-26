@@ -197,7 +197,7 @@
         if (correct >= 7 && correct <= 10) {
             $("#answerDiv").html("Impressive, you can live and be a pet when Skynet goes live");
         }
-        if (correct <= 11 && correct <= 12) {
+        if (correct >= 11 && correct <= 12) {
             $("#answerDiv").html("Amazing the Robot overlords will spare you after the singularity");
         }
     }
