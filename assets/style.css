@@ -122,5 +122,59 @@ img{
     to {color: black;}
 }
 
-  
+@media screen and (max-width:1200px) {
+    #errors, #accepted {
+    position: relative;
+    clear:both;
+    text-align: center;
+    }
 
+#answerDiv {
+    width:100%;
+    }
+
+#imageDisplay{
+    width:100%;
+    position: relative;
+    }
+}
+
+
+@media screen and (max-width:760px) {
+    #errors, #accepted {
+    position: relative;
+    clear:both;
+    text-align: center;
+}
+
+#answerDiv {
+    width:100%;
+}
+
+#imageDisplay{
+    width:100%;
+    position: relative;
+}
+
+
+}
+
+@media screen and (max-width:640px) {
+
+#errors, #accepted {
+ position: relative;
+ clear:both;
+ text-align: center;
+}
+
+#answerDiv {
+    width:100%;
+}
+
+#imageDisplay{
+    width:100%;
+    position: relative;
+}
+
+
+}

@@ -17,7 +17,10 @@
         secs--;
         if (secs <= 0) {
             clearTimeout(timer);
+
+            wrong.play();
             incorrect++;
+            $("#errors").html("errors-" + incorrect);
             console.log("incorrect due to time out, total incorrect: " + incorrect);
             createQuestion(qCounter++);
             return;
@@ -118,7 +121,7 @@
         $('#imageDisplay').animate({ left: endPos }, 1000);
 
         $("#gameBtn").on("click", function() {
-
+            onhold.play();
             createQuestion();
 
         });
