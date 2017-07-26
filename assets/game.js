@@ -193,10 +193,10 @@
         if (correct === 1) {
             $("#answerDiv").html("Terrible Job!  We are guessing you got DJ Roomba right...");
         }
-        if (correct >= 1 && correct <= 3) {
+        if (correct >= 2 && correct <= 3) {
             $("#answerDiv").html("Not Great, you probably have some semblance of a social life");
         }
-        if (correct >= 4 && correct <= 7) {
+        if (correct >= 4 && correct <= 6) {
             $("#answerDiv").html("Good Job, you seem to familiar with some of pop culture's great robots");
         }
         if (correct >= 7 && correct <= 10) {
