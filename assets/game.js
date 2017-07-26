@@ -5,6 +5,7 @@
     var wrong = new Audio("assets/sounds/wrong.mp3");
     var answerRight = new Audio("assets/sounds/correct.mp3");
     var beginSound = new Audio("assets/sounds/onStart.mp3");
+    var onhold = new Audio("assets/sounds/onhold.mp3");
     var endPos = 100;
     var timer;
 
@@ -13,14 +14,18 @@
     function countDown(secs, elem) {
 
         $("#timer").html(secs + " remaining");
+        secs--;
         if (secs <= 0) {
-            checkAnswer();
+            clearTimeout(timer);
+            incorrect++;
+            console.log("incorrect due to time out, total incorrect: " + incorrect);
+            createQuestion(qCounter++);
+            return;
         }
-        --secs;
+        
         timer = setTimeout('countDown(' + secs + ',"' + elem + '")', 1000);
 
     }
-
 
 
     var questions = [
@@ -176,6 +181,7 @@
     }
 
     function checkScore() {
+        onhold.play();
         if (correct === 0) {
             $("#answerDiv").html("Did you just whack your face on the keyboard?");
         }
@@ -191,7 +197,7 @@
         if (correct >= 7 && correct <= 10) {
             $("#answerDiv").html("Impressive, you can live and be a pet when Skynet goes live");
         }
-        if (correct <= 1 && correct <= 12) {
+        if (correct <= 11 && correct <= 12) {
             $("#answerDiv").html("Amazing the Robot overlords will spare you after the singularity");
         }
     }

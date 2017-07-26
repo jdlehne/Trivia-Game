@@ -25,6 +25,7 @@ body {
     text-align: center;
     text-shadow: 0 0 0 3px rgba(63, 240, 0, 0.2);
     background-color: rgba(135, 131, 131, 0.11);
+    box-shadow: 0px 0px 5px 5px rgba(63, 240, 0, 0.2);
 }
 
 #timer{
@@ -36,7 +37,7 @@ body {
 }
 
 #imageDisplay {
-	
+	margin-top: 20px;
     position: absolute;
     left: -500px;
     height: 100%;
@@ -64,6 +65,7 @@ img{
 }    
 
 #answerDiv {
+	
 	font-size: 25px;
 	margin-top: 50px;
 }
@@ -77,6 +79,20 @@ img{
 	background-color:rgba(63, 240, 0, 0.2);
 	border-color: rgba(63, 240, 0, 0.2);
 	color:black;
+}
+
+#results {
+    animation-name: flash;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+
+@keyframes flash {
+    from {color: green;}
+    to {color: black;}
 }
 
   
