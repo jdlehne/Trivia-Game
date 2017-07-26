@@ -162,12 +162,15 @@
             answerRight.play();
             correct++;
             console.log("correct");
+            $("#accepted").html("valid-" + correct);
             createQuestion(qCounter++);
+
 
         } else {
             wrong.play();
             incorrect++;
             console.log("incorrect");
+            $("#errors").html("errors-" + incorrect);
             createQuestion(qCounter++);
 
         }
@@ -181,6 +184,8 @@
     }
 
     function checkScore() {
+        $("#errors").hide();
+        $("#accepted").hide();
         onhold.play();
         if (correct === 0) {
             $("#answerDiv").html("Did you just whack your face on the keyboard?");
