@@ -78,9 +78,10 @@ img{
 }    
 
 #answerDiv {
-	
+    box-shadow: 0px 0px 5px 5px rgba(63, 240, 0, 0.2);
 	font-size: 25px;
 	margin-top: 50px;
+    padding: 40px;
 }
 
 #results{
@@ -130,6 +131,7 @@ img{
     }
 
 #answerDiv {
+
     width:100%;
     }
 
@@ -172,6 +174,7 @@ img{
 }
 
 #imageDisplay{
+    left: 0px;
     width:100%;
     position: relative;
 }
